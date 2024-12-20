@@ -126,7 +126,7 @@ caption {
 .make_Chatpallet, .copy {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     margin: 0 auto;
     padding: .9em 2em;
     border: 1px solid #2589d0;
