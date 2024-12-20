@@ -1,2 +1,14 @@
+# Site Settings
+locale                   : "ja"
+title                    : "Kit box"
+title_separator          : "-"
+name                     : "Naori / Mayu-T"
+description              : "TRPGの準備を楽にするツールを置いているサイトです。現在はクトゥルフ神話TRPGのエネミー駒作成ツールとスカイノーツのチャットパレット生成ツールが置いてあります。
+                            This is a site where you can find tools to make TRPG preparation easier. 
+                            Currently, the Cthulhu Mythos TRPG Enemy Piece Creation Tool and the Sky Notes Chat Palette Generation Tool are located there."
+url                      : # the base hostname & protocol for your site e.g. "https://mayu-t-05.github.io"
+
+
+
 plugins:
   - jekyll-sitemap
