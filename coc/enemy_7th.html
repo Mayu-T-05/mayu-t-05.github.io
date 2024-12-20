@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<!-- Google tag (gtag.js) -->
+	<meta name="google-adsense-account" content="ca-pub-2664956551737030">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2664956551737030" crossorigin="anonymous"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2P5QD9BQQ"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'G-Q2P5QD9BQQ');
+	</script>
+	<meta charset="utf-8">
+	<link href="enemy.css" rel="stylesheet" type="text/css">
+	<script defer src="enemy_7th.js"></script>
+	<link rel=”icon” href=“../kit_box/favicon.ico”>
+</head>
+
+<body>
+	<div class="content">
+		<div class="sidebar">
+			<h1>kit box</h1>
+			<p>
+				<a href="../index.html">home</a>
+			</p>
+			<details class="accordion">
+				<summary>クトゥルフ神話TRPG(6版/7版)</summary>
+				<p>
+					<a href="enemy_6th.html">ココフォリア エネミー駒生成器(6版)</a>
+				</p>
+				<p>
+					<a href="enemy_7th.html">ココフォリア エネミー駒生成器(7版)</a>
+				</p>
+			</details>
+			<details class="accordion">
+				<summary>歯車の塔の探空士 スカイノーツ</summary>
+				<p>
+					<a href="../sky/sky_cp.html">スカイノーツ チャパレ生成器</a>
+				</p>
+			</details>
+		</div>
+		<div class="title">ココフォリア エネミー駒生成器(7版)</div>
+		<div class="left">
+			<h3>基礎データ</h3>
+			<table>
+				<tr>
+					<th>項目名</th>
+					<th>入力欄</th>
+				</tr>
+				<tr>
+					<td>名前</td>
+					<td>
+						<input type="text" id="enemy_name" name="enemy_name">
+					</td>
+				</tr>
+				<tr>
+					<td>STR</td>
+					<td>
+						<input type="number" id="str_score" name="str_score" oninput="calculateMov()">
+					</td>
+				</tr>
+				<tr>
+					<td>CON</td>
+					<td>
+						<input type="number" id="con_score" name="con_score" oninput="calculateHp()">
+					</td>
+				</tr>
+				<tr>
+					<td>POW</td>
+					<td>
+						<input type="number" id="pow_score" name="pow_score" oninput="calculateSanMpLuck()">
+					</td>
+				</tr>
+				<tr>
+					<td>DEX</td>
+					<td>
+						<input type="number" id="dex_score" name="dex_score" oninput="calculateMov()">
+					</td>
+				</tr>
+				<tr>
+					<td>APP</td>
+					<td>
+						<input type="number" id="app_score" name="app_score">
+					</td>
+				</tr>
+				<tr>
+					<td>SIZ</td>
+					<td>
+						<input type="number" id="siz_score" name="siz_score" oninput="calculateHp()">
+					</td>
+				</tr>
+				<tr>
+					<td>INT</td>
+					<td>
+						<input type="number" id="int_score" name="int_score" oninput="calculateIdea()">
+					</td>
+				</tr>
+				<tr>
+					<td>EDU</td>
+					<td>
+						<input type="number" id="edu_score" name="edu_score" oninput="calculateKnouladge()">
+					</td>
+				</tr>
+				<tr>
+					<td>幸運</td>
+					<td>
+						<input type="number" id="luck" name="luck">
+					</td>
+				</tr>
+				<tr>
+					<td>MOV</td>
+					<td>
+						<input type="number" id="mov_score" name="mov_score">
+					</td>
+				</tr>
+				<tr>
+					<td>HP</td>
+					<td>
+						<input type="number" id="hp_score" name="hp_score">
+					</td>
+				</tr>
+				<tr>
+					<td>MP</td>
+					<td>
+						<input type="number" id="mp_score" name="mp_score">
+					</td>
+				</tr>
+				<tr>
+					<td>SAN</td>
+					<td>
+						<input type="number" id="san_score" name="san_score">
+					</td>
+				</tr>　</table>
+		</div>
+		<div class="middle">
+			<h3>技能</h3>
+			<table>
+				<tr>
+					<th>項目名</th>
+					<th>入力欄</th>
+				</tr>
+				<tr>
+					<td>DB</td>
+					<td>
+						<input type="number" id="db1" name="db1">d
+						<input type="number" id="db2" name="db2" size="3">+
+						<input type="number" id="db3" name="db3" size="3">
+					</td>
+				</tr>
+				<tr>
+					<td>アイデア</td>
+					<td>
+						<input type="number" id="idea" name="idea">
+					</td>
+				</tr>
+				<tr>
+					<td>知識</td>
+					<td>
+						<input type="number" id="knowledge" name="knowledge">
+					</td>
+				</tr>　　
+				<tr>
+					<th>判定種別</th>
+					<th>
+						<input type="radio" id="CC" name="check_type" value="CC" checked>
+						<label for="CC">CC</label>
+						<input type="radio" id="CCB" name="check_type" value="CCB">
+						<label for="CCB">CCB</label>
+					</th>
+				</tr>
+				<tr>
+					<th>技能名</th>
+					<th>技能値</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" id="skill_name1" name="kill_name1" placeholder="こぶし">
+					</td>
+					<td>
+						<input type="number" id="skill_score1" name="skill_score1" placeholder="50">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" id="skill_name2" name="skill_name2">
+					</td>
+					<td>
+						<input type="number" id="skill_score2" name="skill_score2">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" id="skill_name3" name="skill_name3">
+					</td>
+					<td>
+						<input type="number" id="skill_score3" name="skill_score3">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" id="skill_name4" name="skill_name4">
+					</td>
+					<td>
+						<input type="number" id="skill_score4" name="skill_score4">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" id="skill_name5" name="skill_name5">
+					</td>
+					<td>
+						<input type="number" id="skill_score5" name="skill_score5">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" id="skill_name6" name="skill_name6">
+					</td>
+					<td>
+						<input type="number" id="skill_score6" name="skill_score6">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" id="skill_name7" name="skill_name7">
+					</td>
+					<td>
+						<input type="number" id="skill_score7" name="skill_score7">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" id="skill_name8" name="skill_name8">
+					</td>
+					<td>
+						<input type="number" id="skill_score8" name="skill_score8">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" id="skill_name9" name="skill_name9">
+					</td>
+					<td>
+						<input type="number" id="skill_score9" name="skill_score9">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" id="skill_name10" name="skill_name10">
+					</td>
+					<td>
+						<input type="number" id="skill_score10" name="skill_score10">
+					</td>
+				</tr>
+			</table>
+			<button class="make_enemy" type="button" onclick="makeEnemy()">エネミー駒生成</button>
+			<br>
+			<button class="copy" type="button" onclick="copyEnemy()">クリップボードへコピー</button>
+		</div>
+		<div class="right">
+			<h3>オプション</h3>※アイコン・差分の画像URLは、ココフォリアにアップロード済みの画像リンクを使用してください。
+			<br>画像リンクの取得方法：ココフォリアの画像一覧を開く→使用したい画像を右クリック→拡大表示→画像のURLを取得
+			<br>(URL例：https://storage.ccfolia-cdn.net/users/hogehoge/files/hogehoge)
+			<br>
+			<table>
+				<tr>
+					<td>カラーコード</td>
+					<td>
+						<input type="text" id="color" name="color">
+					</td>
+				</tr>　　
+				<tr>
+					<td>アイコン画像URL</td>
+					<td>
+						<input type="url" id="icon" name="icon" title="ココフォリアにアップロードした画像の画像リンクを入力してください">
+					</td>
+				</tr>
+				<table>
+					<tr>
+						<th>差分URL</th>
+						<th>差分名</th>
+					</tr>
+					<tr>
+						<td>
+							<input type="url" id="diff_url1" name="diff_url1" placeholder="https://storage.ccfolia-cdn.net/users/hogehoge/files/hogehoge" title="ココフォリアにアップロードした画像の画像リンクを入力してください">
+						</td>
+						<td>
+							<input type="number" id="diff_name1" name="diff_name1" placeholder="@通常" title="@(アットマーク)は半角で入力してください">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="url" id="diff_url2" name="diff_url2">
+						</td>
+						<td>
+							<input type="text" id="diff_name2" name="diff_name2">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="url" id="diff_url3" name="diff_url3">
+						</td>
+						<td>
+							<input type="text" id="diff_name3" name="diff_name3">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="url" id="diff_url4" name="diff_url4">
+						</td>
+						<td>
+							<input type="text" id="diff_name4" name="diff_name4">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="url" id="diff_url5" name="diff_url5">
+						</td>
+						<td>
+							<input type="text" id="diff_name5" name="diff_name5">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="url" id="diff_url6" name="diff_url6">
+						</td>
+						<td>
+							<input type="text" id="diff_name6" name="diff_name6">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="url" id="diff_url7" name="diff_url7">
+						</td>
+						<td>
+							<input type="text" id="diff_name7" name="diff_name7">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="url" id="diff_url8" name="diff_url8">
+						</td>
+						<td>
+							<input type="text" id="diff_name8" name="diff_name8">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="url" id="diff_url9" name="diff_url9">
+						</td>
+						<td>
+							<input type="text" id="diff_name9" name="diff_name9">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="url" id="diff_url10" name="diff_url10">
+						</td>
+						<td>
+							<input type="text" id="diff_name10" name="diff_name10">
+						</td>
+					</tr>
+				</table>
+				<textarea id="enemydata" name="enemydata" rows="15" cols="33">ここに駒が出力されます。全文コピーしてココフォリアに張り付けてください。</textarea>
+				<br>
+			</table>
+		</div>
+	</div>
+</body>
+
+</html>
