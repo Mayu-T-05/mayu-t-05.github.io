@@ -62,14 +62,14 @@
     grid-template-areas: 
         "sidebar title title title"
         "sidebar left middle right";
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
     gap: 10px;
     width: 100%;
 }
 
 .sidebar {
     grid-area: sidebar;
-    background-color: #87ceeb;
+    background-color: #e0ffff;
 }
 
 .title {
