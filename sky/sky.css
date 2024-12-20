@@ -69,6 +69,7 @@
 
 .sidebar {
     grid-area: sidebar;
+    background-color: #87ceeb;
 }
 
 .title {
