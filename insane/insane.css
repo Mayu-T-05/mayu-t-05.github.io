@@ -60,8 +60,7 @@
 .content {
     display: grid;
     grid-template-areas: 
-        "sidebar title title title"
-        "sidebar left middle right";
+        "sidebar main;
     grid-template-columns: 1fr 2fr 2fr 2fr;
     gap: 10px;
     width: 100%;
@@ -72,21 +71,12 @@
     background-color: #8b008b;
 }
 
-.title {
-    grid-area: title;
+.main {
+    grid-area: main;
     text-align: left; /* タイトルを左揃え */
 }
 
-.left {
-    grid-area: left;
-}
-.middle {
-    grid-area: middle;
-}
-.right {
-    grid-area: right;
-    text-align: left;
-}
+
 
 
 
@@ -134,4 +124,11 @@ caption {
     background-color: #fff;
     color: #2589d0;
     font-size: 1em;
+}
+
+#children option:disabled{
+  display:none;
+}
+#children option{
+  display:block;
 }
