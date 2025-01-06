@@ -60,7 +60,7 @@
 					<option value="怪異">怪異</option>
 	  				<option value="" disabled selected>選択してください</option>
 				</select>
-			恐怖心：<select id="fear_parent" onchange="change(this)" class="form">
+			恐怖心：<select id="parent" onchange="change(this)" class="form">
 	  				<option value="暴力" data-category='1'>暴力</option>
 	  				<option value="情動" data-category='2'>情動</option>
 	  				<option value="知覚" data-category='3'>知覚</option>
@@ -69,7 +69,7 @@
 					<option value="怪異" data-category='6'>怪異</option>
 	  				<option value="" disabled selected>選択してください</option>
 				</select>
-				<select id="fear_children" class="form">
+				<select id="children" class="form">
 					<option value="" disabled selected>選択してください
 					<option value="焼却" data-category='1'>焼却</option>
 					<option value="拷問" data-category='1'>拷問</option>
@@ -157,7 +157,7 @@
         <tr>
           		
 			<td><input type="checkbox" id="incineration" name="incineration"/>焼却</td>
-			<td><input type="checkbox" id="love" name="love"/>恋</td>
+			<td><input type="checkbox" id="love_koi" name="love"/>恋</td>
 			<td><input type="checkbox" id="pain" name="pain"/>痛み</td>
 			<td><input type="checkbox" id="decomposition" name="decomposition"/>分解</td>
 			<td><input type="checkbox" id="physics" name="physics"/>物理学</td>
@@ -212,44 +212,44 @@
 			<td><input type="checkbox" id="darkness" name="darkness"/>暗黒</td>
         </tr>
         <tr>
-			<td><input type="checkbox" id="" name=""/>刺す</td>
-			<td><input type="checkbox" id="" name=""/>怒り</td>
-			<td><input type="checkbox" id="" name=""/>追跡</td>
-			<td><input type="checkbox" id="" name=""/>乗物</td>
-			<td><input type="checkbox" id="" name=""/>歴史</td>
-			<td><input type="checkbox" id="" name=""/>終末</td>
+			<td><input type="checkbox"stabbing id="" name="stabbing"/>刺す</td>
+			<td><input type="checkbox" id="anger" name="anger"/>怒り</td>
+			<td><input type="checkbox" id="chase" name="chase"/>追跡</td>
+			<td><input type="checkbox" id="vehicle" name="vehicle"/>乗物</td>
+			<td><input type="checkbox" id="history" name="history"/>歴史</td>
+			<td><input type="checkbox" id="doomsday" name="doomsday"/>終末</td>
         </tr>
         <tr>
-			<td><input type="checkbox" id="" name=""/>射撃</td>
-			<td><input type="checkbox" id="" name=""/>恨み</td>
-			<td><input type="checkbox" id="" name=""/>芸術</td>
-			<td><input type="checkbox" id="" name=""/>機械</td>
-			<td><input type="checkbox" id="" name=""/>民俗学</td>
-			<td><input type="checkbox" id="" name=""/>夢</td>
+			<td><input type="checkbox" id="shooting" name="Shooting"/>射撃</td>
+			<td><input type="checkbox" id="resentment" name="resentment"/>恨み</td>
+			<td><input type="checkbox" id="art" name="art"/>芸術</td>
+			<td><input type="checkbox" id="machinery" name="machinery"/>機械</td>
+			<td><input type="checkbox" id="folklore" name="folklore"/>民俗学</td>
+			<td><input type="checkbox" id="dreams" name="dreams"/>夢</td>
         </tr>
         <tr>
-			<td><input type="checkbox" id="" name=""/>戦争</td>
-			<td><input type="checkbox" id="" name=""/>哀しみ</td>
-			<td><input type="checkbox" id="" name=""/>第六感</td>
-			<td><input type="checkbox" id="" name=""/>罠</td>
-			<td><input type="checkbox" id="" name=""/>考古学</td>
-			<td><input type="checkbox" id="" name=""/>地底</td>
+			<td><input type="checkbox" id="war" name="war"/>戦争</td>
+			<td><input type="checkbox" id="sadness" name="sadness"/>哀しみ</td>
+			<td><input type="checkbox" id="sixth_sense" name="sixth_sense"/>第六感</td>
+			<td><input type="checkbox" id="traps" name="traps"/>罠</td>
+			<td><input type="checkbox" id="archaeology" name="archaeology"/>考古学</td>
+			<td><input type="checkbox" id="underground" name="underground"/>地底</td>
 
         </tr>
         <tr>
-			<td><input type="checkbox" id="" name=""/>埋葬</td>
-			<td><input type="checkbox" id="" name=""/>愛</td>
-			<td><input type="checkbox" id="" name=""/>物陰</td>
-			<td><input type="checkbox" id="" name=""/>兵器</td>
-			<td><input type="checkbox" id="" name=""/>天文学</td>
-			<td><input type="checkbox" id="" name=""/>宇宙
+			<td><input type="checkbox" id="burial" name="burial"/>埋葬</td>
+			<td><input type="checkbox" id="love_ai" name="love_ai"/>愛</td>
+			<td><input type="checkbox" id="shadows" name="shadows"/>物陰</td>
+			<td><input type="checkbox" id="weapons" name="weapons"/>兵器</td>
+			<td><input type="checkbox" id="astronomy" name="astronomy"/>天文学</td>
+			<td><input type="checkbox" id="space" name="space"/>宇宙
         </tr>
         
       </table>
 
 	<div class="cp_make">
-		<textarea id="chatpallet" name="chatpallet" rows="15" cols="33">ここにチャットパレットが生成されます </textarea><br>
+		<textarea id="CP" name="CP" rows="15" cols="33">ここにチャットパレットが生成されます </textarea><br>
 		<button class="make_Chatpallet" type="button" onclick="myFunction()">チャパレ生成</button>
-		<button class="copy" type="button" onclick="copy()">クリップボードへコピー</button>
+		<button class="copy" type="button" onclick="copyCP()">クリップボードへコピー</button>
 	</div>
 			</div>
