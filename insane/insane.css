@@ -80,6 +80,9 @@
 .title {
     grid-area: title;
     text-align: left; /* タイトルを左揃え */
+    line-height: 1.2; /* 行の高さを調整する */
+    margin-top: 10px; /* 上の余白を調整する */
+    margin-bottom: 10px; /* 下の余白を調整する */
 }
 
 
