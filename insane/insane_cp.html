@@ -51,7 +51,99 @@
 		</div>
 		<div class=main>
 		<div class="title"><h1>インセイン チャパレ生成器</h1></div>
+			好奇心：<select id="curiosity"  class="form">
+	  				<option value="暴力">暴力</option>
+	  				<option value="情動">情動</option>
+	  				<option value="知覚">知覚</option>
+	  				<option value="技術">技術</option>
+	  				<option value="知識">知識</option>
+					<option value="怪異">怪異</option>
+	  				<option value="" disabled selected>選択してください</option>
+				</select>
+			恐怖心：<select id="fear_parent" onchange="change(this)" class="form">
+	  				<option value="暴力" data-category='1'>暴力</option>
+	  				<option value="情動" data-category='2'>情動</option>
+	  				<option value="知覚" data-category='3'>知覚</option>
+	  				<option value="技術" data-category='4'>技術</option>
+	  				<option value="知識" data-category='5'>知識</option>
+					<option value="怪異" data-category='6'>怪異</option>
+	  				<option value="" disabled selected>選択してください</option>
+				</select>
+				<select id="fear_children" class="form">
+					<option value="" disabled selected>選択してください
+					<option value="焼却" data-category='1'>焼却</option>
+					<option value="拷問" data-category='1'>拷問</option>
+					<option value="緊縛" data-category='1'>緊縛</option>
+					<option value="脅す" data-category='1'>脅す</option>
+					<option value="破壊" data-category='1'>破壊</option>
+					<option value="殴打" data-category='1'>殴打</option>
+					<option value="切断" data-category='1'>切断</option>
+					<option value="刺す" data-category='1'>刺す</option>
+					<option value="射撃" data-category='1'>射撃</option>
+					<option value="戦争" data-category='1'>戦争</option>
+					<option value="埋葬" data-category='1'>埋葬</option>
+					
+					<option value="恋" data-category='2'>恋</option>
+					<option value="悦び" data-category='2'>悦び</option>
+					<option value="憂い" data-category='2'>憂い</option>
+					<option value="恥じらい" data-category='2'>恥じらい</option>
+					<option value="笑い" data-category='2'>笑い</option>
+					<option value="我慢" data-category='2'>我慢</option>
+					<option value="驚き" data-category='2'>驚き</option>
+					<option value="怒り" data-category='2'>怒り</option>
+					<option value="恨み" data-category='2'>恨み</option>
+					<option value="哀しみ" data-category='2'>哀しみ</option>
+					<option value="愛" data-category='2'>愛</option>
+					
+					<option value="痛み" data-category='3'>痛み</option>
+					<option value="官能" data-category='3'>官能</option>
+					<option value="手触り" data-category='3'>手触り</option>
+					<option value="におい" data-category='3'>におい</option>
+					<option value="味" data-category='3'>味</option>
+					<option value="物音" data-category='3'>物音</option>
+					<option value="情景" data-category='3'>情景</option>
+					<option value="追跡" data-category='3'>追跡</option>
+					<option value="芸術" data-category='3'>芸術</option>
+					<option value="第六感" data-category='3'>第六感</option>
+					<option value="物陰" data-category='3'>物陰</option>
 
+					<option value="分解" data-category='4'>分解</option>
+					<option value="電子機器" data-category='4'>電子機器</option>
+					<option value="整理" data-category='4'>整理</option>
+					<option value="薬品" data-category='4'>薬品</option>
+					<option value="効率" data-category='4'>効率</option>
+					<option value="メディア" data-category='4'>メディア</option>
+					<option value="カメラ" data-category='4'>カメラ</option>
+					<option value="乗物" data-category='4'>乗物</option>
+					<option value="機械" data-category='4'>機械</option>
+					<option value="罠" data-category='4'>罠</option>
+					<option value="兵器" data-category='4'>兵器</option>
+
+					<option value="物理学" data-category='5'>物理学</option>
+					<option value="数学" data-category='5'>数学</option>
+					<option value="化学" data-category='5'>化学</option>
+					<option value="生物学" data-category='5'>生物学</option>
+					<option value="医学" data-category='5'>医学</option>
+					<option value="教養" data-category='5'>教養</option>
+					<option value="人類学" data-category='5'>人類学</option>
+					<option value="歴史" data-category='5'>歴史</option>
+					<option value="民俗学" data-category='5'>民俗学</option>
+					<option value="考古学" data-category='5'>考古学</option>
+					<option value="天文学" data-category='5'>天文学</option>
+
+					<option value="時間" data-category='6'>時間</option>
+					<option value="混沌" data-category='6'>混沌</option>
+					<option value="深海" data-category='6'>深海</option>
+					<option value="死" data-category='6'>死</option>
+					<option value="霊魂" data-category='6'>霊魂</option>
+					<option value="魔術" data-category='6'>魔術</option>
+					<option value="暗黒" data-category='6'>暗黒</option>
+					<option value="終末" data-category='6'>終末</option>
+					<option value="夢" data-category='6'>夢</option>
+					<option value="地底" data-category='6'>地底</option>
+					<option value="宇宙" data-category='6'>宇宙</option>
+					</select>
+			
 		
       <table>
         <tr>
@@ -64,60 +156,60 @@
         </tr>
         <tr>
           		
-			<td><input type="checkbox" id="" name=""/>焼却</td>
-			<td><input type="checkbox" id="" name=""/>恋</td>
-			<td><input type="checkbox" id="" name=""/>痛み</td>
-			<td><input type="checkbox" id="" name=""/>分解</td>
-			<td><input type="checkbox" id="" name=""/>物理学</td>
-			<td><input type="checkbox" id="" name=""/>時間</td>
+			<td><input type="checkbox" id="incineration" name="incineration"/>焼却</td>
+			<td><input type="checkbox" id="love" name="love"/>恋</td>
+			<td><input type="checkbox" id="pain" name="pain"/>痛み</td>
+			<td><input type="checkbox" id="decomposition" name="decomposition"/>分解</td>
+			<td><input type="checkbox" id="physics" name="physics"/>物理学</td>
+			<td><input type="checkbox" id="time" name="time"/>時間</td>
         </tr>
         <tr>
-			<td><input type="checkbox" id="" name=""/>拷問</td>
-			<td><input type="checkbox" id="" name=""/>悦び</td>
-			<td><input type="checkbox" id="" name=""/>官能</td>
-			<td><input type="checkbox" id="" name=""/>電子機器</td>
-			<td><input type="checkbox" id="" name=""/>数学</td>
-			<td><input type="checkbox" id="" name=""/>混沌</td>
+			<td><input type="checkbox" id="torture" name="torture"/>拷問</td>
+			<td><input type="checkbox" id="pleasure" name="pleasure"/>悦び</td>
+			<td><input type="checkbox" id="sensuality" name="sensuality"/>官能</td>
+			<td><input type="checkbox" id="electronics" name="electronics"/>電子機器</td>
+			<td><input type="checkbox" id="mathematics" name="mathematics"/>数学</td>
+			<td><input type="checkbox" id="chaos" name="chaos"/>混沌</td>
         </tr>
         <tr>
-			<td><input type="checkbox" id="" name=""/>緊縛</td>
-			<td><input type="checkbox" id="" name=""/>憂い</td>
-			<td><input type="checkbox" id="" name=""/>手触り</td>
-			<td><input type="checkbox" id="" name=""/>整理</td>
-			<td><input type="checkbox" id="" name=""/>化学</td>
-			<td><input type="checkbox" id="" name=""/>深海</td>
+			<td><input type="checkbox" id="bondage" name="bondage"/>緊縛</td>
+			<td><input type="checkbox" id="melancholy" name="melancholy"/>憂い</td>
+			<td><input type="checkbox" id="touch" name="touch"/>手触り</td>
+			<td><input type="checkbox" id="organisation" name="organisation"/>整理</td>
+			<td><input type="checkbox" id="chemistry" name="chemistry"/>化学</td>
+			<td><input type="checkbox" id="deep_sea" name="deep_sea"/>深海</td>
         </tr>
         <tr>
-			<td><input type="checkbox" id="" name=""/>脅す</td>
-			<td><input type="checkbox" id="" name=""/>恥じらい</td>
-			<td><input type="checkbox" id="" name=""/>におい</td>
-			<td><input type="checkbox" id="" name=""/>薬品</td>
-			<td><input type="checkbox" id="" name=""/>生物学</td>
-			<td><input type="checkbox" id="" name=""/>死</td>
+			<td><input type="checkbox" id="threaten" name="threaten"/>脅す</td>
+			<td><input type="checkbox" id="shame" name="shame"/>恥じらい</td>
+			<td><input type="checkbox" id="smell" name="smell"/>におい</td>
+			<td><input type="checkbox" id="chemicals" name="chemicals"/>薬品</td>
+			<td><input type="checkbox" id="biology" name="biology"/>生物学</td>
+			<td><input type="checkbox" id="death" name="death"/>死</td>
         </tr>
         <tr>
-			<td><input type="checkbox" id="" name=""/>破壊</td>
-			<td><input type="checkbox" id="" name=""/>笑い</td>
-			<td><input type="checkbox" id="" name=""/>味</td>
-			<td><input type="checkbox" id="" name=""/>効率</td>
-			<td><input type="checkbox" id="" name=""/>医学</td>
-			<td><input type="checkbox" id="" name=""/>霊魂</td>
+			<td><input type="checkbox" id="destruction" name="destruction"/>破壊</td>
+			<td><input type="checkbox" id="laughter" name="laughter"/>笑い</td>
+			<td><input type="checkbox" id="taste" name="taste"/>味</td>
+			<td><input type="checkbox" id="efficiency" name="efficiency"/>効率</td>
+			<td><input type="checkbox" id="nedicine" name="medicine"/>医学</td>
+			<td><input type="checkbox" id="spirit" name="spirit"/>霊魂</td>
         </tr>
         <tr>
-			<td><input type="checkbox" id="" name=""/>殴打</td>
-			<td><input type="checkbox" id="" name=""/>我慢</td>
-			<td><input type="checkbox" id="" name=""/>物音</td>
-			<td><input type="checkbox" id="" name=""/>メディア</td>
-			<td><input type="checkbox" id="" name=""/>教養</td>
-			<td><input type="checkbox" id="" name=""/>魔術</td>
+			<td><input type="checkbox" id="beatings" name="beatings"/>殴打</td>
+			<td><input type="checkbox" id="patience" name="patience"/>我慢</td>
+			<td><input type="checkbox" id="noise" name="Noise"/>物音</td>
+			<td><input type="checkbox" id="media" name="media"/>メディア</td>
+			<td><input type="checkbox" id="cultivation" name="cultivation"/>教養</td>
+			<td><input type="checkbox" id="witchcraft" name="witchcraft"/>魔術</td>
         </tr>
         <tr>
-			<td><input type="checkbox" id="" name=""/>切断</td>
-			<td><input type="checkbox" id="" name=""/>驚き</td>
-			<td><input type="checkbox" id="" name=""/>情景</td>
-			<td><input type="checkbox" id="" name=""/>カメラ</td>
-			<td><input type="checkbox" id="" name=""/>人類学</td>
-			<td><input type="checkbox" id="" name=""/>暗黒</td>
+			<td><input type="checkbox" id="disconnection" name="disconnection"/>切断</td>
+			<td><input type="checkbox" id="surprise" name="surprise"/>驚き</td>
+			<td><input type="checkbox" id="scenography" name="scenography"/>情景</td>
+			<td><input type="checkbox" id="camera" name="camera"/>カメラ</td>
+			<td><input type="checkbox" id="anthropology" name="anthropology"/>人類学</td>
+			<td><input type="checkbox" id="darkness" name="darkness"/>暗黒</td>
         </tr>
         <tr>
 			<td><input type="checkbox" id="" name=""/>刺す</td>
@@ -142,9 +234,10 @@
 			<td><input type="checkbox" id="" name=""/>罠</td>
 			<td><input type="checkbox" id="" name=""/>考古学</td>
 			<td><input type="checkbox" id="" name=""/>地底</td>
-			<td><input type="checkbox" id="" name=""/>埋葬</td>
+
         </tr>
         <tr>
+			<td><input type="checkbox" id="" name=""/>埋葬</td>
 			<td><input type="checkbox" id="" name=""/>愛</td>
 			<td><input type="checkbox" id="" name=""/>物陰</td>
 			<td><input type="checkbox" id="" name=""/>兵器</td>
