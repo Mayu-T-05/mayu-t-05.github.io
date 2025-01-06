@@ -77,6 +77,10 @@
     text-align: left; /* タイトルを左揃え */
 }
 
+.title {
+    grid-area: title;
+    text-align: left; /* タイトルを左揃え */
+}
 
 
 
