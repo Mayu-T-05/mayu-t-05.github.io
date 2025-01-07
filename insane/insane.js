@@ -48,6 +48,9 @@ function makeCP(){
     //スキル作成
     for (let i = 0; i < skill_number ; i++){
           for (let j = 0; j < all_skill_number ; j++){
+                        console.log(`Processing skill ${i} and all_skill ${j}`);
+                        console.log("all_skill[j]:", all_skill[j]);
+                        console.log("skills[i]:", skills[i]);
                 let k = Math.abs(all_skill[j][1]-skills[i][1]) + Math.abs(all_skill[j][2]-skills[i][2]) + 5
 
               if(!all_skill[j][4]){
