@@ -46,8 +46,8 @@ function makeCP(){
     let skill_number = skills.length
 
     //スキル作成
-    for (let i = 0; i <= skill_number ; i++){
-          for (let j = 0; j <= all_skill_number ; j++){
+    for (let i = 0; i < skill_number ; i++){
+          for (let j = 0; j < all_skill_number ; j++){
                 let k = Math.abs(all_skill[j][1]-skills[i][1]) + Math.abs(all_skill[j][2]-skills[i][2]) + 5
 
               if(!all_skill[j][4]){
@@ -62,7 +62,7 @@ function makeCP(){
           }
     }
 
-    for(let i = 0; i <= all_skill_number ; i++){
+    for(let i = 0; i < all_skill_number ; i++){
         let cp =""
         if(all_skill_number[i][3] === all_skill_number[i][0]){
             cp = "2D6>=5 【" + all_skill_number[i][0] + "】\n"
