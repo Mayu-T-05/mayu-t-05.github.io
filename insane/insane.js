@@ -49,9 +49,6 @@ function makeCP(){
     //スキル作成
     for (let i = 0; i < skill_number ; i++){
           for (let j = 0; j < all_skill_number ; j++){
-                        console.log(`Processing skill ${i} and all_skill ${j}`);
-                        console.log("all_skill[j]:", all_skill[j]);
-                        console.log("skills[i]:", skills[i]);
                 let k = Math.abs(all_skill[j][1]-skills[i][1]) + Math.abs(all_skill[j][2]-skills[i][2]) + 5
 
               if(!all_skill[j][4]){
@@ -65,7 +62,17 @@ function makeCP(){
               }  
           }
     }
+    
+    //恐怖心の設定
+    let fear = document.getElementById('children').value;
+    for(let n = 0; n < all_skill.length; n++){
+        if(all_skill[n][0] === fear){
+            all_skill[n][4] += 2; // skillNum[n][4]の値に+2 
+            all_skill[n][0] += "(恐怖心)"; // "(恐怖心)"を追加
+        } 
+    }
 
+    //スキルを1文にする
     for(let i = 0; i < all_skill_number ; i++){
         let cp =""
         if(all_skill[i][3] === all_skill[i][0]){
@@ -99,15 +106,6 @@ function getCheckedCheckboxes() {
             return checkedValues;
 
         }
-
-
-
-
-
-
-
-
-
 
 
 //好奇心でスキルに番号振りする
