@@ -67,7 +67,7 @@ function makeEnemy() {
         kind: "character",
         data: {
             name: document.getElementById('enemy_name').value,
-            initiative: document.getElementById('dex_score').value,
+            initiative: Number(document.getElementById('dex_score').value),
             status: [{
                 label: "HP",
                 value: document.getElementById('hp_score').value,
